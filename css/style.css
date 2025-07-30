@@ -1,0 +1,447 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+/*CLASSES UTILITÁRIAS*/
+.hidden {
+  display: none;
+}
+
+.fade {
+  animation: fade 1.5s;
+}
+
+.company-title {
+  color: #0072b5;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 2.2rem;
+  text-align: center;
+  padding-block: 1.4rem;
+}
+
+/*CONTROLE DE SCROLL*/
+
+#introduction, #brands, #contact, #location {
+  scroll-margin-top: 6rem;
+}
+
+#app {
+  width: 100%;
+  margin: auto;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #0072b5;
+  color: #fff;
+  backdrop-filter: blur(4px);
+}
+
+.hero {
+  background: url("../assets/background.jpg") top center/cover no-repeat;
+}
+
+.hero-flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-content p {
+  margin-block: 2rem;
+}
+
+.hero-img {
+  width: 30rem;
+  height: auto;
+  object-fit: cover;
+}
+
+.whatsapp-button {
+  margin: 1.5rem auto;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: 0.1ch;
+  font-size: large;
+  text-transform: uppercase;
+  background-color: #25d366;
+  padding: 1.2rem 1.4rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.2s;
+  box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.41);
+}
+
+.whatsapp-button i {
+  font-size: 3rem;
+}
+
+.whatsapp-button:hover {
+  background-color: #128c7e;
+}
+
+#open-menu-button {
+  all: unset;
+  color: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+#open-menu-button:hover {
+  scale: 1.1;
+}
+
+#close-menu-button {
+  all: unset;
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+#close-menu-button:hover {
+  scale: 1.1;
+}
+
+.navbar-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  z-index: 1001;
+  white-space: nowrap;
+  background-color: #000000e5;
+  height: 100vh;
+  animation: slideIn 0.3s ease-in-out forwards;
+}
+
+.navbar-content ul {
+  list-style-type: none;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  margin-top: 4rem;
+}
+
+.navbar-content ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar-content ul li a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  transition: all ease-in-out;
+}
+
+main {
+  margin: auto;
+}
+
+section.highlight-cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  margin-block: 4rem;
+}
+
+.highlight-card {
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+  border: 0.1rem solid #3db4f948;
+  background-color: #f7f7f7;
+  padding: 1.2rem 1.4rem;
+  border-radius: 1rem;
+  box-shadow: 0.1rem 0.1rem 1rem 0rem rgba(0, 0, 0, 0.145);
+}
+
+.highlight-card i {
+  font-size: 4rem;
+  color: #3db4f9;
+}
+
+.highlight-card h3 {
+  text-transform: uppercase;
+  font-size: 1.7rem;
+}
+
+.highlight-card p {
+  font-size: 1.45rem;
+  color: #6d6d6d;
+}
+
+section.introduction {
+  width: 100%;
+  background: #003553;
+  background: linear-gradient(170deg, #003553 0%, #000000 100%);
+  color: #fff;
+  padding: 5rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.introduction-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.introduction-image svg {
+  max-width: 50rem;
+}
+
+section.brands {
+  margin-block: 5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.brands-section-container {
+  max-width: 30rem;
+  text-align: center;
+  margin: auto;
+}
+
+.brands-slide {
+  max-width: 30rem;
+  height: 20rem;
+  border: 0.1rem solid #3db4f9;
+  border-radius: 3rem;
+}
+
+.brand-logo-img {
+  max-width: 30rem;
+  height: 20rem;
+  object-fit: contain;
+}
+
+section.contact {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+section.contact .contact-link {
+  text-decoration: none;
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  color: #0072b5;
+}
+
+section.contact .contact-link:hover {
+  text-decoration: underline;
+}
+
+section.contact .contact-link .ph-phone {
+  color: #000;
+}
+
+section.contact .contact-link .ph-whatsapp-logo {
+  color: #128c7e;
+}
+
+section.contact .contact-link .ph-envelope {
+  color: #0072b5;
+}
+
+.location {
+  margin-block: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 0 1rem;
+}
+
+.location iframe {
+  width: 32rem;
+  max-width: 60rem;
+}
+
+.location .address-link {
+  text-decoration: none;
+  color: #0072b5;
+}
+
+.location .address-link:hover {
+  text-decoration: underline;
+  transition: 0.2s ease-in-out;
+}
+
+footer {
+  background: #003553;
+  background: linear-gradient(170deg, #003553 0%, #000000 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 30rem;
+  gap: 6rem;
+  color: #fff;
+  padding: 0rem 2rem;
+}
+
+footer .footer-location a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+footer .footer-workdays p {
+  font-size: 1.3rem;
+}
+
+.copyright {
+  padding: 1.4rem;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #fff;
+  background-color: #292929;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 60%;
+  }
+}
+
+/*ANIMAÇÃO DO SVG*/
+
+svg#freepik_stories-printer:not(.animated) .animable {
+  opacity: 0;
+}
+svg#freepik_stories-printer.animated #freepik--background-complete--inject-34 {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) lightSpeedRight;
+  animation-delay: 0s;
+}
+svg#freepik_stories-printer.animated #freepik--Plant--inject-34 {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) lightSpeedLeft;
+  animation-delay: 0s;
+}
+svg#freepik_stories-printer.animated #freepik--Character--inject-34 {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) slideUp;
+  animation-delay: 0s;
+}
+svg#freepik_stories-printer.animated #freepik--Printer--inject-34 {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) slideUp;
+  animation-delay: 0s;
+}
+svg#freepik_stories-printer.animated #freepik--Floor--inject-34 {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) slideRight;
+  animation-delay: 0s;
+}
+@keyframes lightSpeedRight {
+  from {
+    transform: translate3d(50%, 0, 0) skewX(-20deg);
+    opacity: 0;
+  }
+  60% {
+    transform: skewX(10deg);
+    opacity: 1;
+  }
+  80% {
+    transform: skewX(-2deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes lightSpeedLeft {
+  from {
+    transform: translate3d(-50%, 0, 0) skewX(20deg);
+    opacity: 0;
+  }
+  60% {
+    transform: skewX(-10deg);
+    opacity: 1;
+  }
+  80% {
+    transform: skewX(2deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: inherit;
+  }
+}
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
