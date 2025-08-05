@@ -37,7 +37,10 @@ html {
 
 /*CONTROLE DE SCROLL*/
 
-#introduction, #brands, #contact, #location {
+#introduction,
+#brands,
+#contact,
+#location {
   scroll-margin-top: 9rem;
 }
 
@@ -270,6 +273,8 @@ section.contact {
   padding: 0 1rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
 }
 
@@ -354,7 +359,7 @@ footer .footer-workdays p {
 }
 
 footer img {
-  transform: translateX(.6rem);
+  transform: translateX(0.6rem);
 }
 
 .copyright {
@@ -462,4 +467,91 @@ svg#freepik_stories-printer.animated #freepik--Floor--inject-34 {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+/*MEDIA QUERY*/
+@media (min-width: 1024px) {
+  #open-menu-button,
+  #close-menu-button {
+    display: none;
+  }
+  .navbar-content {
+    display: block;
+    height: initial;
+    background-color: transparent;
+    position: initial;
+    overflow: initial;
+  }
+
+  .navbar-content ul {
+    flex-direction: row;
+    align-items: center;
+    margin-top: initial;
+  }
+
+  .hero-flex-container {
+    flex-direction: row;
+    height: 50rem;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .hero-content {
+    width: 50%;
+  }
+
+  section.highlight-cards-container {
+    flex-direction: row;
+    max-width: 90%;
+    margin: 4rem auto;
+    transform: translateY(-70%);
+  }
+
+  .highlight-card {
+    height: 17.1rem;
+    justify-content: center;
+  }
+
+  section.introduction {
+    flex-direction: row;
+    height: 50rem;
+    align-items: center;
+    padding: 0rem 5rem;
+  }
+
+  .introduction-text {
+    width: 50%;
+  }
+
+  .introduction-image {
+    width: 50%;
+    padding: 0;
+  }
+
+  .brands-section-container {
+    max-width: 70%;
+  }
+
+  .brands-slide {
+    max-width: 80%;
+    height: 30rem;
+    margin: auto;
+  }
+
+  .brand-logo-img {
+    max-width: 80%;
+    height: 30rem;
+    object-fit: scale-down;
+  }
+
+  .location iframe {
+    width: 90%;
+    height: 40rem;
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
 }
