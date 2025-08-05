@@ -38,7 +38,7 @@ html {
 /*CONTROLE DE SCROLL*/
 
 #introduction, #brands, #contact, #location {
-  scroll-margin-top: 6rem;
+  scroll-margin-top: 9rem;
 }
 
 #app {
@@ -54,13 +54,18 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.4rem;
+  padding: 0rem 1.7rem;
   position: sticky;
   top: 0;
   z-index: 1000;
   background-color: #0072b5;
   color: #fff;
   backdrop-filter: blur(4px);
+}
+
+.garbimaq-logo-img {
+  width: 9rem;
+  height: auto;
 }
 
 .hero {
@@ -323,10 +328,15 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   height: 30rem;
   gap: 6rem;
   color: #fff;
   padding: 0rem 2rem;
+}
+
+footer .footer-location {
+  text-align: center;
 }
 
 footer .footer-location a {
@@ -335,8 +345,16 @@ footer .footer-location a {
   font-size: 1.3rem;
 }
 
+footer .footer-workdays {
+  text-align: center;
+}
+
 footer .footer-workdays p {
   font-size: 1.3rem;
+}
+
+footer img {
+  transform: translateX(.6rem);
 }
 
 .copyright {
